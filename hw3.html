@@ -32,7 +32,11 @@
                 case '+': return String(a + b);
                 case '-': return String(a - b);
                 case '*': return String(a * b);
-                case '/': return String(a / b);
+                case '/':
+                    if (b)
+                        return String(a / b);
+                    else
+                        return "Хотели поделить на ноль! Не получилось("
                 default: return "Сори, некорректный ввод!"
             }
         }
